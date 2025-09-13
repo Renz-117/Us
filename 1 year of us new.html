@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Year of Us [Fian] & [Dzalfa]</title>
+    <!-- Tailwind CSS untuk styling responsif dan modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF0F5; /* Light pink background */
+            color: #4A4A4A;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px 40px;
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #EBEB;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 3em;
+            color: #E91E63; /* Deep pink for heading */
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+        }
+        .header p {
+            font-size: 1.1em;
+            font-style: italic;
+            color: #888;
+        }
+        .header img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .content {
+            padding: 20px 0;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 2em;
+            color: #E91E63; /* Deep pink for section titles */
+            margin-bottom: 15px;
+            border-left: 4px solid #E91E63;
+            padding-left: 15px;
+        }
+        .section-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        .section-content.reverse {
+            flex-direction: row-reverse;
+        }
+        .section-text {
+            flex: 2;
+        }
+        .section-image {
+            flex: 1;
+            text-align: center;
+        }
+        .section-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .audio-player {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #EBEB;
+            font-style: italic;
+            color: #999;
+            margin-top: 20px;
+        }
+        /* Heart animation styles */
+        .animated-heart {
+            color: #E91E63; /* Pink heart color */
+            animation: pulse-pink 1.5s infinite;
+        }
+        @keyframes pulse-pink {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        /* Custom modal for messages */
+        .message-box {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 100;
+            text-align: center;
+            width: 80%;
+            max-width: 400px;
+        }
+        .message-box-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 99;
+        }
+        .btn-loading {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .section-content, .section-content.reverse {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box-overlay" id="message-overlay" onclick="closeMessageBox()"></div>
+    <div class="message-box" id="message-box">
+        <p id="message-text"></p>
+        <button onclick="closeMessageBox()" class="mt-4 px-4 py-2 bg-pink-500 text-white rounded-lg">Tutup</button>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>1 Year of Us <span class="animated-heart">&#x2764;</span></h1>
+            <p>Sebuah perjalanan, yang tak pernah terfikirkan oleh 2 orang ini.</p>
+            <!-- Ganti URL placeholder di bawah dengan tautan publik foto Anda -->
+            <img src="C:\Users\GF63\Downloads\images\IMG_5466.JPG" alt="Foto Utama Kalian">
+        </div>
+
+        <div class="audio-player">
+            <div class="info" 
+            div>
+            <audio controls autoplay loop>
+                <source src="C:\Users\GF63\Downloads\images\SSvid--Pamungkas-Monolog-Lyrics-Video.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Awal Kisah Kita
+        
+                </h2>
+                <div class="section-content">
+                    <div class="section-text">
+                        <p>Hai sayang, dulu kita berdua adalah orang yang nggak pernah mikir kalau bakalan ada "kita" di masa SMA. Apalagi kita dari daerah berbeda, mulai dari bahasa, kesukaan, sifat. Kita itu jauh banget bedanya, kamu sukanya ini aku sukanya itu HAHAHAHA.</p>
+                        <p>Dulu, ingat nggak pas kamu pertama kali kena 'goreng' dan kamu bahkan langsung ngehindar dari aku biar nggak kena 'goreng' terus? Kamu bahkan ngerasa kalau aku sok asik lho, aku tiba-tiba minta IG kamu, kamu udah hampir ilfeel karena aku sokab.</p>
+                    </div>
+                    <div class="section-image">
+                        <!-- Ganti 'URL_FOTO_2' -->
+                        <img src="C:\Users\GF63\Downloads\images\1y of us\IMG_1542.JPG" alt="Momen Awal">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Malam di Panboss: Percikan Hati</h2>
+                <div class="section-content reverse">
+                    <div class="section-text">
+                        <p>Lalu berpindah pada suatu hari di mana kita tiba-tiba janjian ke Panboss dan beneran jadi. Pulang dari Panboss, malam itu juga aku udah yakin sama diri aku kalau aku punya perasaan ke kamu. Aku suka sama kamu karena kamu itu cewek yang nggak grasak grusuk, nurut, dan yang paling penting nggak ngomong kasar. Hari pertama aku mulai PDKT pas pulang dari Panboss, jujur canggung banget... kamu langsung to the point, tapi aku nggak nyerah.</p>
+                    </div>
+                    <div class="section-image">
+                        <!-- Ganti 'URL_FOTO_3' -->
+                        <img src="C:\Users\GF63\Downloads\images\pdkt.jpg" alt="Momen Panboss">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Berjam-jam Ngobrol</h2>
+                <div class="section-content">
+                    <div class="section-text">
+                        <p>Selang beberapa hari dan minggu, kita udah sering banget chat sampai begadang jam 2. Aku nggak akan pernah lupa hari itu, di mana aku merasa nyaman banget ngobrol sama kamu sambil ngetawain topik yang nggak jelas, bahkan topiknya pun nggak habis-habis. Kita off karena kita berdua lelah dan ngantuk.</p>
+                    </div>
+                    <div class="section-image">
+                        <!-- Ganti 'URL_FOTO_4' -->
+                        <img src="C:\Users\GF63\Downloads\images\1y of us\087BA081-3167-4B89-9CD5-5B628DAE412D.jpg" alt="Momen Begadang">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">14 September 2024: Hari "Kita" Dimulai</h2>
+                <div class="section-content reverse">
+                    <div class="section-text">
+                        <p>1 bulan setelah itu, siangnya kita bahas soal HTS/TTM/friendzone. Malamnya, aku langsung jawab "Kalau nggak ada ngapain aku berjuang sampai sini?" Walaupun awalnya kamu muter-muter topik, akhirnya kita jadian di tanggal "14 September 2024".</p>
+                        <p>Hari itu juga aku ngerasa seneng banget berhasil ngedapetin kamu. Rasanya mood aku nggak nemu celah buat badmood. Kita buat Spotify Blend, kamu post CF aku juga post CF foto paparazzi kita, dan sampai sekarang, walaupun aku pernah keras kepala, kita tetap balikan.</p>
+                    </div>
+                    <div class="section-image">
+                        <!-- Ganti 'URL_FOTO_5' -->
+                        <img src="C:\Users\GF63\Downloads\images\1y of us\IMG_1541.JPG" alt="Momen Jadian">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Satu Tahun dan Masih Berlanjut</h2>
+                <p>Hehehe, kita udah sejauh itu ya? Its been 1 year ago babe, dan sekarang kita berdiri dan jalan bareng dengan perasaan yang sama. Nggak ada masalah yang bisa pisahin kita berdua, semua masalah bakalan selesai dalam beberapa menit, walau prosesnya super berat, tapi aku tahu kita nggak bakalan kalah sama ego kita berdua.</p>
+                <p>Aku mau ngomong makasih banget, kamu udah bikin aku ngerasain gimana rasanya disayang. Setidaknya aku pernah tau dan ngerasa kalau aku pernah disayang banget sama 1 cewek yang aku pun nggak sangka kalo aku bakalan berubah buat hubungan ini.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Makasih ya sayang? Semoga kalau kita pisah nanti, kamu bisa jadi wanita yang mandiri, kuat, dan hebat. Kejar terus cita-cita kamu, aku pasti bakalan doain. Anytime n anything for u sayang, I love you more than you know💕</p>
+        <div class="section-image">
+                        <!-- Ganti 'URL_FOTO_5' -->
+                        <img src="C:\Users\GF63\Downloads\images\1y of us\e687a978-acea-415f-9da1-53fa883f2ad0.jpg">
+                    </div>
+                </div>
+            </div>
+        
